@@ -10,7 +10,12 @@ interface ProductListProps {
 
 function ProductList({ categoryTitle, children }: ProductListProps) {
 	return (
-		<Flex flexDirection='column' width='100%' alignItems='center'>
+		<Flex
+			flexDirection='column'
+			width='100%'
+			alignItems='center'
+			marginBottom={{ base: '32px', md: '64px' }}
+		>
 			<VStack gap='16px' w={{ base: '328px', md: '704px', xl: '1133px' }}>
 				<Flex justifyContent='space-between' width='100%'>
 					<Heading text={categoryTitle} color={theme.colors.black} />

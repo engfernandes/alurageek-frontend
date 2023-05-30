@@ -1,13 +1,23 @@
 import { Image } from '@chakra-ui/react';
 
-function Logo() {
+interface LogoProps {
+	isFooter: boolean;
+}
+
+function Logo({ isFooter }: LogoProps) {
 	return (
-		<Image
-			src='img/Logo.svg'
-			alt='Logo Alura Geek'
-			h={{ base: '28', xl: '50px' }}
-			w={{ base: '100px', xl: '176px' }}
-		/>
+		<>
+			{isFooter ? (
+				<Image src='img/Logo.svg' alt='Logo Alura Geek' h='50px' w='176px' />
+			) : (
+				<Image
+					src='img/Logo.svg'
+					alt='Logo Alura Geek'
+					h={{ base: '28px', xl: '50px' }}
+					w={{ base: '100px', xl: '176px' }}
+				/>
+			)}
+		</>
 	);
 }
 
