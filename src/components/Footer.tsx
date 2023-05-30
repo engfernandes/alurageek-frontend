@@ -91,6 +91,7 @@ function Footer() {
 			</Flex>
 			<Flex
 				alignItems='center'
+				background={theme.colors.white}
 				height='102px'
 				justifyContent='center'
 				position='static'

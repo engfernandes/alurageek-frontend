@@ -2,6 +2,7 @@ import { Flex, useMediaQuery } from '@chakra-ui/react';
 import Logo from './Logo';
 import Button from './Button';
 import SearchBar from './SearchBar';
+import theme from '@/Theme';
 
 function Header() {
 	const [isMobile] = useMediaQuery('(max-width: 767px)');
@@ -11,6 +12,7 @@ function Header() {
 			{isMobile ? (
 				<Flex
 					alignItems='center'
+					background={theme.colors.white}
 					h={{ base: '72px', xl: '115px' }}
 					justifyContent='center'
 					width='100%'
@@ -29,6 +31,7 @@ function Header() {
 			) : (
 				<Flex
 					alignItems='center'
+					background={theme.colors.white}
 					h={{ base: '72px', xl: '115px' }}
 					justifyContent='center'
 					width='100%'
