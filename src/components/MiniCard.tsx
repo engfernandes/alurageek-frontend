@@ -10,12 +10,21 @@ interface MiniCardProps {
 	title: string;
 	value: number;
 	link: string;
+	isAuxiliar?: boolean;
 }
 
-function MiniCard({ display, src, alt, title, value, link }: MiniCardProps) {
+function MiniCard({
+	display,
+	src,
+	alt,
+	title,
+	value,
+	link,
+	isAuxiliar = false,
+}: MiniCardProps) {
 	return (
 		<Card
-			background={theme.colors.white}
+			background='transparent'
 			borderRadius='none'
 			boxShadow='none'
 			display={display}
