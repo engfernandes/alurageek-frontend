@@ -17,6 +17,7 @@ function Footer() {
 				flexWrap='wrap'
 				flexShrink={1}
 				gap='32px'
+				justifyContent='center'
 				maxH={{ base: '640px' }}
 				padding={{ base: '32px' }}
 				width='100%'
