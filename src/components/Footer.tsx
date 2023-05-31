@@ -87,7 +87,12 @@ function Footer() {
 						value={''}
 						handleChange={undefined}
 					/>
-					<Button text='Enviar mensagem' variant='solid' isPrimary={false} />
+					<Button
+						text='Enviar mensagem'
+						variant='solid'
+						isPrimary={false}
+						handleClick={undefined}
+					/>
 				</FormControl>
 			</Flex>
 			<Flex

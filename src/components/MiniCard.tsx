@@ -2,6 +2,7 @@ import theme from '@/Theme';
 import { Card, CardBody, Flex, Link, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 interface MiniCardProps {
 	display?: any;
@@ -10,18 +11,9 @@ interface MiniCardProps {
 	title: string;
 	value: number;
 	link: string;
-	isAuxiliar?: boolean;
 }
 
-function MiniCard({
-	display,
-	src,
-	alt,
-	title,
-	value,
-	link,
-	isAuxiliar = false,
-}: MiniCardProps) {
+function MiniCard({ display, src, alt, title, value, link }: MiniCardProps) {
 	return (
 		<Card
 			background='transparent'
@@ -49,7 +41,7 @@ function MiniCard({
 						color={theme.colors.blue}
 						fontSize='16px'
 						fontWeight={700}
-						href={''}
+						href={'/:id'}
 					>
 						{link}
 					</Link>

@@ -5,9 +5,15 @@ interface ButtonProps {
 	variant?: 'solid' | 'outline' | 'link';
 	isPrimary?: boolean;
 	text: string;
+	handleClick: any;
 }
 
-function Button({ variant = 'solid', isPrimary, text }: ButtonProps) {
+function Button({
+	variant = 'solid',
+	isPrimary,
+	text,
+	handleClick,
+}: ButtonProps) {
 	return (
 		<ButtonChakra
 			background={variant === 'solid' ? `${theme.colors.blue}` : 'transparent'}
@@ -23,6 +29,7 @@ function Button({ variant = 'solid', isPrimary, text }: ButtonProps) {
 			minWidth={isPrimary === false ? '130px' : 'min-content'}
 			padding='16px'
 			variant={variant}
+			onClick={handleClick}
 		>
 			{text}
 		</ButtonChakra>

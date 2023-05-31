@@ -3,9 +3,12 @@ import Logo from './Logo';
 import Button from './Button';
 import SearchBar from './SearchBar';
 import theme from '@/Theme';
+import { useRouter } from 'next/router';
 
 function Header() {
 	const [isMobile] = useMediaQuery('(max-width: 767px)');
+
+	const router = useRouter();
 
 	return (
 		<>
@@ -24,7 +27,12 @@ function Header() {
 						w={{ base: '328px', md: '704px', xl: '1133px' }}
 					>
 						<Logo isFooter={false} />
-						<Button text='Login' isPrimary={false} variant='outline' />
+						<Button
+							text='Login'
+							isPrimary={false}
+							variant='outline'
+							handleClick={() => router.push('/login')}
+						/>
 						<SearchBar value={undefined} handleChange={undefined} />
 					</Flex>
 				</Flex>
@@ -44,7 +52,12 @@ function Header() {
 					>
 						<Logo isFooter={false} />
 						<SearchBar value={undefined} handleChange={undefined} />
-						<Button text='Login' isPrimary={false} variant='outline' />
+						<Button
+							text='Login'
+							isPrimary={false}
+							variant='outline'
+							handleClick={() => router.push('/login')}
+						/>
 					</Flex>
 				</Flex>
 			)}

@@ -26,7 +26,6 @@ function Product() {
 							title='Product XYZ'
 							value={60}
 							link={'Ver Produto'}
-							isAuxiliar={true}
 						/>
 						<MiniCard
 							src='img/unsplash_6FDXGY9J6y4.svg'
