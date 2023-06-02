@@ -1,7 +1,15 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
 import theme from '@/Theme';
+import useProductStore from '@/stores/product';
 
 function ProductDetail() {
+	const [image, alt, title, price] = useProductStore((state) => [
+		state.image,
+		state.alt,
+		state.title,
+		state.price,
+	]);
+
 	return (
 		<Flex
 			alignItems={{ base: 'flex-start', xl: 'center' }}
@@ -12,8 +20,8 @@ function ProductDetail() {
 			margin={{ base: '32px', xl: '64px' }}
 		>
 			<Image
-				src='/img/star-wars/star-wars1.svg'
-				alt=''
+				src={image}
+				alt={alt}
 				objectFit='cover'
 				h={{ base: '192px', md: '157px', xl: '403px' }}
 				marginTop='16px'
@@ -26,10 +34,10 @@ function ProductDetail() {
 				w={{ base: '328px', md: '434px', xl: '560px' }}
 			>
 				<Text fontSize={{ base: '22px', xl: '52px' }} fontWeight={700}>
-					Produto XYZ
+					{title}
 				</Text>
 				<Text color={theme.colors.black} fontSize='16px' fontWeight={700}>
-					R$ 60,00
+					R$ {price.toFixed(2)}
 				</Text>
 				<Text
 					color={theme.colors.black}

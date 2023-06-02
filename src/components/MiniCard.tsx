@@ -1,8 +1,8 @@
 import theme from '@/Theme';
+import useProductStore from '@/stores/product';
 import { Card, CardBody, Flex, Link, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 
 interface MiniCardProps {
 	display?: any;
@@ -11,9 +11,20 @@ interface MiniCardProps {
 	title: string;
 	value: number;
 	link: string;
+	handleClick: any;
 }
 
-function MiniCard({ display, src, alt, title, value, link }: MiniCardProps) {
+function MiniCard({
+	display,
+	src,
+	alt,
+	title,
+	value,
+	link,
+	handleClick,
+}: MiniCardProps) {
+	const slug = useProductStore((state) => state.slug);
+
 	return (
 		<Card
 			background='transparent'
@@ -41,7 +52,8 @@ function MiniCard({ display, src, alt, title, value, link }: MiniCardProps) {
 						color={theme.colors.blue}
 						fontSize='16px'
 						fontWeight={700}
-						href={'/product'}
+						href={`${slug}`}
+						onClick={handleClick}
 					>
 						{link}
 					</Link>
