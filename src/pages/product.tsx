@@ -57,7 +57,7 @@ function Product() {
 							display={{ base: 'none', xl: 'flex' }}
 						/>
 						<MiniCard
-							src='img/diversos1.svg'
+							src='img/diversos/diverso1.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
