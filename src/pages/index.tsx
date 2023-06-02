@@ -1,53 +1,153 @@
-import theme from '@/Theme';
-import Button from '@/components/Button';
-import Heading from '@/components/Heading';
-import Input from '@/components/Input';
+import FeaturedBanner from '@/components/FeaturedBanner';
+import MiniCard from '@/components/MiniCard';
+import ProductList from '@/components/ProductList';
 import Layout from '@/components/layout/Layout';
-import { Flex, FormControl } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
-function Login() {
+export default function Home() {
 	return (
-		<Flex
-			alignItems='center'
-			background={theme.colors.lightGrey}
-			flexDirection='column'
-			justifyContent='center'
-		>
+		<Flex alignItems='center' flexDirection='column' justifyContent='center'>
 			<Layout>
-				<Flex
-					alignItems='center'
-					display='flex'
-					flexDirection='column'
-					gap='32px'
-					justifyContent='center'
-					margin='92px 0'
-				>
-					<Heading text='Iniciar Sessão' color={theme.colors.black} />
-					<FormControl
-						alignItems='center'
-						display='flex'
-						flexDirection='column'
-						gap='32px'
-						justifyContent='center'
-					>
-						<Input
-							placeholder='Digite seu e-mail'
-							type='email'
-							value={''}
-							handleChange={undefined}
-						/>
-						<Input
-							placeholder='Digite sua senha'
-							type='password'
-							value={''}
-							handleChange={undefined}
-						/>
-						<Button text='Entrar' isPrimary={false} variant='solid' />
-					</FormControl>
-				</Flex>
+				<FeaturedBanner />
+				<ProductList categoryTitle='Star Wars'>
+					<MiniCard
+						src='img/star-wars/star-wars1.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/star-wars/star-wars2.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/star-wars/star-wars3.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/star-wars/star-wars4.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/star-wars/star-wars5.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+					<MiniCard
+						src='img/star-wars/star-wars6.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+				</ProductList>
+				<ProductList categoryTitle='Consoles'>
+					<MiniCard
+						src='img/consoles/console1.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/consoles/console2.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/consoles/console3.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/consoles/console4.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/consoles/console5.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+					<MiniCard
+						src='img/consoles/console6.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+				</ProductList>
+				<ProductList categoryTitle='Diversos'>
+					<MiniCard
+						src='img/diversos/diverso1.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/diversos/diverso2.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/diversos/diverso3.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/diversos/diverso4.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+					/>
+					<MiniCard
+						src='img/diversos/diverso5.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+					<MiniCard
+						src='img/diversos/diverso6.svg'
+						alt=''
+						title='Product XYZ'
+						value={60}
+						link={'Ver Produto'}
+						display={{ base: 'none', xl: 'flex' }}
+					/>
+				</ProductList>
 			</Layout>
 		</Flex>
 	);
 }
-
-export default Login;

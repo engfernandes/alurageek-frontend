@@ -41,7 +41,7 @@ function MiniCard({ display, src, alt, title, value, link }: MiniCardProps) {
 						color={theme.colors.blue}
 						fontSize='16px'
 						fontWeight={700}
-						href={'/:id'}
+						href={'/product'}
 					>
 						{link}
 					</Link>

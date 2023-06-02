@@ -21,35 +21,35 @@ function Product() {
 					<ProductDetail />
 					<ProductList categoryTitle='Produtos similares'>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/star-wars/star-wars2.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
 							link={'Ver Produto'}
 						/>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/star-wars/star-wars3.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
 							link={'Ver Produto'}
 						/>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/star-wars/star-wars4.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
 							link={'Ver Produto'}
 						/>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/star-wars/star-wars5.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
 							link={'Ver Produto'}
 						/>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/star-wars/star-wars6.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}
@@ -57,7 +57,7 @@ function Product() {
 							display={{ base: 'none', xl: 'flex' }}
 						/>
 						<MiniCard
-							src='img/unsplash_6FDXGY9J6y4.svg'
+							src='img/diversos1.svg'
 							alt=''
 							title='Product XYZ'
 							value={60}

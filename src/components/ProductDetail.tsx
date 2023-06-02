@@ -12,7 +12,7 @@ function ProductDetail() {
 			margin={{ base: '32px', xl: '64px' }}
 		>
 			<Image
-				src='/img/unsplash_6FDXGY9J6y4.svg'
+				src='/img/star-wars/star-wars1.svg'
 				alt=''
 				objectFit='cover'
 				h={{ base: '192px', md: '157px', xl: '403px' }}
