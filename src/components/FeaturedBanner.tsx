@@ -6,6 +6,7 @@ import Button from './Button';
 function FeaturedBanner() {
 	return (
 		<Flex
+			alignItems='center'
 			backgroundImage='/img/banner.jpg'
 			backgroundRepeat='no-repeat'
 			backgroundPosition='center'
@@ -18,8 +19,8 @@ function FeaturedBanner() {
 		>
 			<Flex
 				flexDirection='column'
-				padding={{ base: '16px', md: '32px', lg: '32px 152px' }}
-				w={{ base: '328px', md: '704px', xl: '1133px' }}
+				padding={{ base: '16px 0', md: '32px 0', lg: '32px 0' }}
+				w={{ base: '328px', md: '704px', xl: '1136px' }}
 			>
 				<Heading color={theme.colors.white} text='Dezembro Promocional' />
 				<Text
@@ -29,7 +30,12 @@ function FeaturedBanner() {
 				>
 					Produtos selecionados com 33% de desconto
 				</Text>
-				<Button text='Ver Consoles' isPrimary={true} variant='solid' />
+				<Button
+					text='Ver Consoles'
+					isPrimary={true}
+					variant='solid'
+					handleClick={undefined}
+				/>
 			</Flex>
 		</Flex>
 	);

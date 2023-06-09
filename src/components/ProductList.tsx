@@ -16,7 +16,7 @@ function ProductList({ categoryTitle, children }: ProductListProps) {
 			alignItems='center'
 			marginBottom={{ base: '32px', md: '64px' }}
 		>
-			<VStack gap='16px' w={{ base: '328px', md: '704px', xl: '1133px' }}>
+			<VStack gap='16px' w={{ base: '328px', md: '704px', xl: '1136px' }}>
 				<Flex justifyContent='space-between' width='100%'>
 					<Heading text={categoryTitle} color={theme.colors.black} />
 					<Flex
