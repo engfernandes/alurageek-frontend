@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta name='description' content='Description' />
 				<meta name='keywords' content='Keywords' />
 				<title>AluraGeek</title>
-				<link rel='shortcut icon' href='/img/favicon.ico'></link>
+				<link rel='shortcut icon' href='/favicon.ico'></link>
 			</Head>
 			<Component {...pageProps} />
 		</ChakraProvider>
